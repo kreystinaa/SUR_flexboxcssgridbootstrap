@@ -1,0 +1,50 @@
+<!doctype html>
+<title>Flexbox Assignment</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 2;
+  }
+  #main {
+    display: flex;
+    flex: 2;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+	background: beige;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+  #main > nav {
+    background: beige;
+    order: 3;
+  }
+  #main > aside {
+    background: #333333;
+    order: 2;
+  }
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    padding: 2em;
+  }
+</style>
+<body>
+  <header>Content Title (Header)</header>
+  <div id="main">
+    <article>Content</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>

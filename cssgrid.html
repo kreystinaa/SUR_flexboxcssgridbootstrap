@@ -1,0 +1,56 @@
+<!doctype html>
+<title>CSS Grid Assignment</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav content"
+    "nav ads"
+    "footer footer";
+  grid-template-rows: 80px 1fr 70px 70px;  
+  grid-template-columns: 20% 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+header, footer, content, nav, div {
+  padding: 1.2em;
+  background: gray;
+  }
+#pageHeader {
+  grid-area: header;
+  }
+#pageFooter {
+  grid-area: footer;
+  }
+#mainContent { 
+  grid-area: content;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-area: ads; 
+  } 
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "content"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+</style>
+<body>
+  <header id="pageHeader">Header Title</header>
+  <content id="mainContent">Content</content>
+  <nav id="mainNav">Nav</nav>
+  <div id="siteAds">Ads</div>
+  <footer id="pageFooter">Footer</footer>
+</body>
